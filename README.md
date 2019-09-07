@@ -12,7 +12,6 @@
 1. 安全部署Lambda函数
 1. 通过Lambda发送公众号推送
 >Note: 为了防止资源重名，请在创建资源名称时替代下述的“XX”。
->如果以下S3链接失效，或者没有权限请到https://github.com/cncoder/awsinit/tree/master/lambdaLabs下载。
 
 
 ## LAB1：创建您的第一个LAMBDA 函数
@@ -60,7 +59,7 @@
 在本lab中，您将会学习如何利用 **Lambda** , **API Gateway** 以及 **DynamoDB** 制作一个serverless架构的问卷表达。在本章节的最后，我们还将通过一个简单的示例演示lambda的冷启动以及复用效果。
 
 1. 下载lambda 代码包    
-点击下载[Survery-Survery.zip]() 以及 [SurverySubmit.zip]()
+点击下载[Survery-Survery.zip](code/Survey-Survey.zip) 以及 [SurverySubmit.zip](code/SurveySubmit.zip)
 
 1. 创建IAM Role   
    - 打开[IAM Role 页面](https://console.amazonaws.cn/iam/home?#/roles)，选择创建角色并且选择lambda作为使用角色的服务
@@ -184,7 +183,7 @@
    ![](img/lab3-final-effect.png)
    
 ## LAB4： 通过LAMBDA 发送公众号推送
-1. 点击[代码下载页面]()下载代码
+1. 点击[下载代码(sns2wechat.zip)](code/sns2wechat.zip)
 1. 登录[微信测试号](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫码登陆后，复制页面的“appID”和 “appsecret” （相当于开发者身份密钥）
    ![](img/lab4-wechat-ID.png)
 1. 打开自己的微信，关注自己的测试公众号。并记录自己微信号（openid），复制备用
