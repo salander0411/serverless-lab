@@ -1,18 +1,17 @@
-# 无服务器架构入门实验
+# 无服务器 Serverless 架构入门实验
 
-概览
+本文档包含四个serverless相关的实验，以[lambda产品](https://www.amazonaws.cn/lambda/)为基础，由浅及深的讲述如何搭建serverless环境并且结合其他产品一起做应用部署。
 
 ## 前提条件
 1. 本文所有实验皆基于AWS中国区北京区(cn-north-1)作示例。所有控制台链接均直接连接到北京区console。
 1. 如果用海外账号做此lab，请不要用本文console链接跳转，直接在global console选择对应的产品即可。
+1. 为了防止资源重名，请在创建资源名称时替代下述的“XX”。
 
 ## 内容目录
-1. 创建您的第一个lambda函数
-1. 创建Serverless架构的调查问卷表单
-1. 安全部署Lambda函数
-1. 通过Lambda发送公众号推送
->Note: 为了防止资源重名，请在创建资源名称时替代下述的“XX”。
-
+LAB1: 创建您的第一个lambda函数
+LAB2: 创建Serverless架构的调查问卷表单
+LAB3: 安全部署Lambda函数
+LAB4: 通过Lambda发送公众号推送
 
 ## LAB1：创建您的第一个LAMBDA 函数
 在本lab当中，您将会学习如何创建一个基于 python2.7 的 lambda 函数，如何在lambda 控制台修改示例代码，并且查看输出结果以及日志。
@@ -55,7 +54,6 @@
    
 
 ## LAB2: 创建SERVERLESS架构的调查问卷表单
-
 在本lab中，您将会学习如何利用 **Lambda** , **API Gateway** 以及 **DynamoDB** 制作一个serverless架构的问卷表达。在本章节的最后，我们还将通过一个简单的示例演示lambda的冷启动以及复用效果。
 
 1. 下载lambda 代码包    
@@ -183,6 +181,8 @@
    ![](img/lab3-final-effect.png)
    
 ## LAB4： 通过LAMBDA 发送公众号推送
+在本lab中，您讲学习如何通过 [**LAMBDA**](https://www.amazonaws.cn/lambda/) 以及 [**SNS**](https://www.amazonaws.cn/sns/?nc2=h_l3_ms) 快速实现微信公众号后台推送。
+
 1. 点击[下载代码(sns2wechat.zip)](code/sns2wechat.zip)
 1. 登录[微信测试号](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login), 扫码登陆后，复制页面的“appID”和 “appsecret” （相当于开发者身份密钥）
    ![](img/lab4-wechat-ID.png)
@@ -219,13 +219,12 @@
 1. 修改代码, 替换您的appid以及appsecret   
    ![](img/lab4-replace-appid.png)
 
-1. 打开[SNS](https://console.amazonaws.cn/sns/v2/home?region=cn-north-1#/home)进行配置
+1. 打开[SNS](https://console.amazonaws.cn/sns/v2/home?region=cn-north-1#/home)，创建主题
    ![](img/lab4-create-SNS-topic.png)
 
-1. 点击创建订阅
+1. 点击创建订阅，选择刚刚创建的lambda
    ![](img/lab4-create-subscription.png)
-   
-1. 选择刚刚创建的lambda
+
    ![](img/lab4-choose-lambda-as-subscription.png)
    
 1. 点击 **发布到主题**
@@ -246,10 +245,8 @@
    ```
    ![](img/lab4-SNS-message.png)
    
-1. 点击发送后您可以在微信中看到如下提醒，您可以尝试点击，会跳转到对应的超链接。其实就是在SNS中发送的 json里面定义了。
+1. 点击发送后您可以在微信中看到如下提醒，您可以尝试点击，会跳转到对应的超链接，其实就是在SNS发送的JSON里面自定义内容了。
    ![](img/lab4-wechat-notification.png)
-   
-1. 至此，我们已经完成了
 
 ## 参考资料
 [AWS官方博客：轻松使用 Serverless 架构实现微信公众号后台开发](https://aws.amazon.com/cn/blogs/china/easytouse-serverless-wechat-official-account-development/)
