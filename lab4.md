@@ -83,6 +83,6 @@
 下面可以点击此处[回到主目录](README.md)回顾总结或者进行其他实验。
 
 ## 参考资料
-[AWS官方博客：轻松使用 Serverless 架构实现微信公众号后台开发](https://aws.amazon.com/cn/blogs/china/easytouse-serverless-wechat-official-account-development/)
-[GitHub Wechat API](https://github.com/node-webot/wechat-api)
-[带您玩转Lambda，轻松构建Serverless后台！](https://aws.amazon.com/cn/blogs/china/lambda-serverless/)
+[AWS官方博客：轻松使用 Serverless 架构实现微信公众号后台开发](https://aws.amazon.com/cn/blogs/china/easytouse-serverless-wechat-official-account-development/)    
+[GitHub Wechat API](https://github.com/node-webot/wechat-api)     
+[带您玩转Lambda，轻松构建Serverless后台！](https://aws.amazon.com/cn/blogs/china/lambda-serverless/)     
